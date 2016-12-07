@@ -7,7 +7,15 @@
     <h2>Noticias</h2>
 
     <asp:GridView ID="gvNoticias" runat="server" CssClass="table table-hover" GridLines="None" BorderStyle="None"
-        AutoGenerateColumns="true">
+        AutoGenerateColumns="False">
+        <Columns>
+            <asp:BoundField DataField="Id" HeaderText="Campo Id" />
+            <asp:BoundField DataField="Titulo" HeaderText="Titulo" />
+            <asp:BoundField DataField="Descripción" HeaderText="Cuerpo" />
+            <asp:BoundField DataField="Fecha" HeaderText="Fecha" />
+            <asp:BoundField DataField="Autor" HeaderText="Autor" />
+            <asp:BoundField DataField="Id Categoria" HeaderText="Id Categoria" />
+        </Columns>
     </asp:GridView>
 
 </asp:Content>

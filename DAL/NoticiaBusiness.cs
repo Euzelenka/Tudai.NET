@@ -53,8 +53,8 @@ namespace DAL
             SqlConnection oConn = new SqlConnection(Constants.connectionString);
             oConn.Open();
             try
-            {
-                using (NoticiaDataAccess tDataAccess = new NoticiaDataAccess())
+            {   //forma de utilizar un objeto y lo destruye cuando termina
+                using (NoticiaDataAccess tDataAccess = new NoticiaDataAccess()) 
                 {
                     return tDataAccess.GetAll(oConn, null);
                 }
